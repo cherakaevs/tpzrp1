@@ -18,7 +18,7 @@ public class Client {
 
                 dos = new DataOutputStream(socket.getOutputStream());
                 Noise.addNoise(Constants.SRC_PATH,
-                            Constants.NOISE_PATH);
+                               Constants.NOISE_PATH);
                 File file = new File(Constants.NOISE_PATH);
                 fis = new FileInputStream(file);
 

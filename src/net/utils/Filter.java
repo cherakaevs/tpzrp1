@@ -54,28 +54,28 @@ public class Filter {
 
 
                 int[] greenArray = new int[9];
-                greenArray[0] = p1.getColor().getRed();
-                greenArray[1] = p2.getColor().getRed();
-                greenArray[2] = p3.getColor().getRed();
-                greenArray[3] = p4.getColor().getRed();
-                greenArray[4] = p.getColor().getRed();
-                greenArray[5] = p6.getColor().getRed();
-                greenArray[6] = p7.getColor().getRed();
-                greenArray[7] = p8.getColor().getRed();
-                greenArray[8] = p9.getColor().getRed();
+                greenArray[0] = p1.getColor().getGreen();
+                greenArray[1] = p2.getColor().getGreen();
+                greenArray[2] = p3.getColor().getGreen();
+                greenArray[3] = p4.getColor().getGreen();
+                greenArray[4] = p.getColor().getGreen();
+                greenArray[5] = p6.getColor().getGreen();
+                greenArray[6] = p7.getColor().getGreen();
+                greenArray[7] = p8.getColor().getGreen();
+                greenArray[8] = p9.getColor().getGreen();
                 Arrays.sort(greenArray);
                 int medianGreed = greenArray[4];
 
                 int[] blueArray = new int[9];
-                blueArray[0] = p1.getColor().getRed();
-                blueArray[1] = p2.getColor().getRed();
-                blueArray[2] = p3.getColor().getRed();
-                blueArray[3] = p4.getColor().getRed();
-                blueArray[4] = p.getColor().getRed();
-                blueArray[5] = p6.getColor().getRed();
-                blueArray[6] = p7.getColor().getRed();
-                blueArray[7] = p8.getColor().getRed();
-                blueArray[8] = p9.getColor().getRed();
+                blueArray[0] = p1.getColor().getBlue();
+                blueArray[1] = p2.getColor().getBlue();
+                blueArray[2] = p3.getColor().getBlue();
+                blueArray[3] = p4.getColor().getBlue();
+                blueArray[4] = p.getColor().getBlue();
+                blueArray[5] = p6.getColor().getBlue();
+                blueArray[6] = p7.getColor().getBlue();
+                blueArray[7] = p8.getColor().getBlue();
+                blueArray[8] = p9.getColor().getBlue();
                 Arrays.sort(blueArray);
                 int medianBlue = blueArray[4];
 
