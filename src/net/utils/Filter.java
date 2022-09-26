@@ -1,5 +1,8 @@
 package net.utils;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -86,7 +89,8 @@ public class Filter {
         File result = new File(res);
         ImageIO.write(tmp, "jpeg", result);
     }
-
+    @Getter
+    @Setter
     private static class PixelDot{
         private int x;
         private int y;
@@ -96,30 +100,6 @@ public class Filter {
         public PixelDot(int x, int y){
             this.x = x;
             this.y = y;
-        }
-
-        public int getX() {
-            return x;
-        }
-
-        public int getY() {
-            return y;
-        }
-
-        public void setX(int x) {
-            this.x = x;
-        }
-
-        public void setY(int y) {
-            this.y = y;
-        }
-
-        public Color getColor() {
-            return color;
-        }
-
-        public void setColor(Color color) {
-            this.color = color;
         }
     }
 }

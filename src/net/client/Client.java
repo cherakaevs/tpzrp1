@@ -1,5 +1,6 @@
 package net.client;
 
+import net.utils.Constants;
 import net.utils.Noise;
 
 import java.io.*;
@@ -16,9 +17,9 @@ public class Client {
                 socket = new Socket(InetAddress.getLocalHost(), 1234);
 
                 dos = new DataOutputStream(socket.getOutputStream());
-                Noise.addNoise("/Users/karmikfeels/IdeaProjects/tpzrp1/src/net/client/baji.jpeg",
-                            "/Users/karmikfeels/IdeaProjects/tpzrp1/src/net/client/noise.jpeg");
-                File file = new File("/Users/karmikfeels/IdeaProjects/tpzrp1/src/net/client/noise.jpeg");
+                Noise.addNoise(Constants.SRC_PATH,
+                            Constants.NOISE_PATH);
+                File file = new File(Constants.NOISE_PATH);
                 fis = new FileInputStream(file);
 
                 byte[] sendBytes = new byte[1024];

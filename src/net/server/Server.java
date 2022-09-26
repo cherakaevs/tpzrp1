@@ -1,5 +1,6 @@
 package net.server;
 
+import net.utils.Constants;
 import net.utils.Filter;
 
 import java.io.*;
@@ -19,8 +20,8 @@ public class Server {
                     }
 
                     receiveFile(socket);
-                    Filter.filterImage("/Users/karmikfeels/IdeaProjects/tpzrp1/src/net/server/noise.jpeg",
-                                        "/Users/karmikfeels/IdeaProjects/tpzrp1/src/net/server/result.jpeg");
+                    Filter.filterImage(Constants.DST_PATH,
+                                        Constants.RESULT_PATH);
 
                     System.out.println("\n--------------------------------------------------------------\n");
                 }
@@ -43,7 +44,7 @@ public class Server {
         try {
             try {
                 dis = new DataInputStream(socket.getInputStream());
-                fos = new FileOutputStream(new File("/Users/karmikfeels/IdeaProjects/tpzrp1/src/net/server/noise.jpeg"));
+                fos = new FileOutputStream(new File(Constants.DST_PATH));
                 inputByte = new byte[1024];
                 System.out.println ("Loading...");
                 while ((length = dis.read(inputByte, 0, inputByte.length)) > 0) {
