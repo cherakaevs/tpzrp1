@@ -1,8 +1,5 @@
 package net.utils;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -32,15 +29,15 @@ public class Filter {
                 PixelDot p9 = new PixelDot(x+1, y+1);
 
 
-                p1.setColor(new Color(tmp.getRGB(p1.x, p1.y)));
-                p2.setColor(new Color(tmp.getRGB(p2.x, p2.y)));
-                p3.setColor(new Color(tmp.getRGB(p3.x, p3.y)));
-                p4.setColor(new Color(tmp.getRGB(p4.x, p4.y)));
-                p.setColor(new Color(tmp.getRGB(p.x, p.y)));
-                p6.setColor(new Color(tmp.getRGB(p6.x, p6.y)));
-                p7.setColor(new Color(tmp.getRGB(p7.x, p7.y)));
-                p8.setColor(new Color(tmp.getRGB(p8.x, p8.y)));
-                p9.setColor(new Color(tmp.getRGB(p9.x, p9.y)));
+                p1.setColor(new Color(tmp.getRGB(p1.getX(), p1.getY())));
+                p2.setColor(new Color(tmp.getRGB(p2.getX(), p2.getY())));
+                p3.setColor(new Color(tmp.getRGB(p3.getX(), p3.getY())));
+                p4.setColor(new Color(tmp.getRGB(p4.getX(), p4.getY())));
+                p.setColor(new Color(tmp.getRGB(p.getX(), p.getY())));
+                p6.setColor(new Color(tmp.getRGB(p6.getX(), p6.getY())));
+                p7.setColor(new Color(tmp.getRGB(p7.getX(), p7.getY())));
+                p8.setColor(new Color(tmp.getRGB(p8.getX(), p8.getY())));
+                p9.setColor(new Color(tmp.getRGB(p9.getX(), p9.getY())));
 
                 int[] redArray = new int[9];
                 redArray[0] = p1.getColor().getRed();
@@ -88,19 +85,6 @@ public class Filter {
         }
         File result = new File(res);
         ImageIO.write(tmp, "jpeg", result);
-    }
-    @Getter
-    @Setter
-    private static class PixelDot{
-        private int x;
-        private int y;
-
-        Color color;
-
-        public PixelDot(int x, int y){
-            this.x = x;
-            this.y = y;
-        }
     }
 }
 
