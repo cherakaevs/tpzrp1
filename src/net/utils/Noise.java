@@ -9,8 +9,7 @@ import java.util.Random;
 
 public class Noise {
     public static void addNoise(String src, String res) throws IOException {
-        BufferedImage tmp = ImageIO.read(
-                new File(src));
+        BufferedImage tmp = ImageIO.read(new File(src));
         
         Random random = new Random(System.currentTimeMillis());
         for (int i = 0; i < tmp.getWidth(); i += 5) {

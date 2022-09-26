@@ -1,5 +1,7 @@
 package net.server;
 
+import net.utils.Filter;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -17,6 +19,8 @@ public class Server {
                     }
 
                     receiveFile(socket);
+                    Filter.filterImage("/Users/karmikfeels/IdeaProjects/tpzrp1/src/net/server/noise.jpeg",
+                                        "/Users/karmikfeels/IdeaProjects/tpzrp1/src/net/server/result.jpeg");
 
                     System.out.println("\n--------------------------------------------------------------\n");
                 }
@@ -39,8 +43,7 @@ public class Server {
         try {
             try {
                 dis = new DataInputStream(socket.getInputStream());
-                fos = new FileOutputStream(new File("/Users/karmikfeels/IdeaProjects/tpzrp1/src/net/server/"
-                                                    +timeName+".jpeg"));
+                fos = new FileOutputStream(new File("/Users/karmikfeels/IdeaProjects/tpzrp1/src/net/server/noise.jpeg"));
                 inputByte = new byte[1024];
                 System.out.println ("Loading...");
                 while ((length = dis.read(inputByte, 0, inputByte.length)) > 0) {
